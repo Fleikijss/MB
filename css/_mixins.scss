@@ -1,0 +1,17 @@
+@mixin media($breakpoint, $direction) {
+    @media only screen and ($direction: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @include media($bp-tablet, min-width) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @include media($bp-desktop, min-width) {
+        @content;
+    }
+}
